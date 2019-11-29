@@ -1,0 +1,66 @@
+PODS:
+  - aws_iot (0.0.1):
+    - AWSIoT (~> 2.11.0)
+    - AWSMobileClient (~> 2.11.0)
+    - Flutter
+    - plugin_scaffold
+  - AWSAuthCore (2.11.1):
+    - AWSCore (= 2.11.1)
+  - AWSCognitoIdentityProvider (2.11.1):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.11.1)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.11.1)
+  - AWSIoT (2.11.1):
+    - AWSCore (= 2.11.1)
+  - AWSMobileClient (2.11.1):
+    - AWSAuthCore (= 2.11.1)
+    - AWSCognitoIdentityProvider (= 2.11.1)
+  - Flutter (1.0.0)
+  - flutter_cognito_plugin (0.0.1):
+    - AWSMobileClient (~> 2.11.0)
+    - Flutter
+    - plugin_scaffold
+  - plugin_scaffold (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - aws_iot (from `.symlinks/plugins/aws_iot/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+  - flutter_cognito_plugin (from `.symlinks/plugins/flutter_cognito_plugin/ios`)
+  - plugin_scaffold (from `.symlinks/plugins/plugin_scaffold/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSIoT
+    - AWSMobileClient
+
+EXTERNAL SOURCES:
+  aws_iot:
+    :path: ".symlinks/plugins/aws_iot/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  flutter_cognito_plugin:
+    :path: ".symlinks/plugins/flutter_cognito_plugin/ios"
+  plugin_scaffold:
+    :path: ".symlinks/plugins/plugin_scaffold/ios"
+
+SPEC CHECKSUMS:
+  aws_iot: 97d575d0fe12786ec93a11fe2be4e59336727c63
+  AWSAuthCore: 23545c33485f2e92acde3e7458e6ee07410e7f28
+  AWSCognitoIdentityProvider: 81fe83bd5b05151250346eedbabdb055b509d439
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 00093a1ff49b5d6ce5f1e4d83fe301486fc5034d
+  AWSIoT: 3db9287c5722b84bec60d147063795d8ba62ed77
+  AWSMobileClient: 1acbe6ae32ebe5899425ac33d89491e4608da393
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_cognito_plugin: 12b6627514b887914305da26e17ca87aae67bbac
+  plugin_scaffold: e7c52bc1cfb6e672959f798dfc9dea8dff55daeb
+
+PODFILE CHECKSUM: 2c26e2bafa90f053205a9e99ab1fdce88251e293
+
+COCOAPODS: 1.8.4
