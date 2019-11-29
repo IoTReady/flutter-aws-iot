@@ -1,5 +1,7 @@
 # Flutter AWS IoT
 
+[![Pub](https://img.shields.io/pub/v/aws_iot.svg?style=for-the-badge)](https://pub.dartlang.org/packages/aws_iot)
+
 AWS IoT plugin for flutter, intended to fit nicely with [flutter_cognito_plugin](https://github.com/scientifichackers/flutter_cognito_plugin) and [mqtt_client](https://pub.dev/packages/mqtt_client).
 
 - Basic pub/sub functionality.
