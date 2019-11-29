@@ -10,7 +10,7 @@ AWS IoT plugin for flutter, intended to fit nicely with [flutter_cognito_plugin]
 
 # Install
 
-- Use flutter plugin install instructions on Dart Pub.  
+- Use flutter plugin installation instructions on [Dart Pub](https://pub.dev/packages/aws_iot#-installing-tab-).  
 - Ensure `platform :ios, '9.0'` at `ios/Podfile`.
 - Add `awsconfiguration.json` by following instructions at [flutter_cognito_plugin](https://github.com/scientifichackers/flutter_cognito_plugin) for Android/iOS.
 
