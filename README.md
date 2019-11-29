@@ -17,7 +17,7 @@ AWS IoT plugin for flutter, intended to fit nicely with [flutter_cognito_plugin]
 - Clone 
 
 ```
-git clone ...
+git clone https://github.com/IoTReady/flutter-aws-iot.git
 cd example
 cp assets/.env.example assets/.env
 ```
