@@ -2,7 +2,7 @@ name: aws_iot
 description: A new flutter plugin project.
 version: 0.0.1
 author: Dev Aggarwal <devxpy@gmail.com>
-homepage:
+homepage: https://github.com/IoTReady/flutter-aws-iot
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
