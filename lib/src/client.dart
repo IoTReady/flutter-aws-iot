@@ -40,6 +40,15 @@ class AWSIotDevice {
     messages = _msgControl.stream.asBroadcastStream();
   }
 
+  Stream<AWSIotMsg> filterMessages(String topicFilter) async* {
+    var topic = SubscriptionTopic(topicFilter);
+    await for (var msg in messages) {
+      if (topic.matches(PublicationTopic(msg.topic))) {
+        yield msg;
+      }
+    }
+  }
+
   Future<void> connect() async {
     var url = await getWebSocketURL();
     client = MqttClient(url, clientId);
@@ -59,11 +68,11 @@ class AWSIotDevice {
 
     client.updates.listen((messages) {
       for (var msg in messages) {
-        MqttPublishMessage _msg = msg.payload;
+        MqttPublishMessage pubMsg = msg.payload;
         _msgControl.add(
           AWSIotMsg(
             msg.topic,
-            Uint8List.fromList(_msg.payload.message.toList()),
+            Uint8List.fromList(pubMsg.payload.message.toList()),
           ),
         );
       }
@@ -171,9 +180,10 @@ class AWSIotDevice {
     @required String identityId,
     @required String policyName,
   }) async {
+    assert(identityId != null && policyName != null);
     await channel.invokeMethod('attachPolicy', {
-      'identityId': identityId,
-      'policyName': policyName,
+      'identityId': identityId ?? '',
+      'policyName': policyName ?? '',
       'region': getRegion(),
     });
   }
@@ -199,6 +209,11 @@ class AWSIotMsg {
   String get asStr => utf8.decode(asBytes);
 
   dynamic get asJson => jsonDecode(asStr);
+
+  @override
+  String toString() {
+    return "<$runtimeType topic: '$topic' asStr: '$asStr'>";
+  }
 }
 
 class InvalidAWSIotEndpoint implements Exception {

@@ -14,6 +14,7 @@ void main() async {
   if (!await Cognito.isSignedIn()) {
     print(await Cognito.signIn(dotenv.env['USERNAME'], dotenv.env['PASSWORD']));
   }
+  print(await Cognito.getIdentityId());
 
   var device = AWSIotDevice(
     endpoint: dotenv.env['ENDPOINT'],
